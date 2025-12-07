@@ -36,7 +36,8 @@ https://github.com/anthonycaccese/techdweeb-es-de
       blue,
       red,
       grey,
-      dmg
+      dmg,
+      black
       ">
       <variables>
          <colorSchemePath>./colors.xml</colorSchemePath>
@@ -457,9 +458,17 @@ https://github.com/anthonycaccese/techdweeb-es-de
    -->
    <variant name="
       gamelist-carousel-cover
+      gamelist-carousel-cover-name
+      gamelist-carousel-screenshot-name
       ">
-      <include>./_inc/systems/coversize/${systemCoverSize}.xml</include>
       <view name="gamelist">
+         <image name="gamelist-carousel-background">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <cropSize>1 1</cropSize>
+            <path>./_inc/images/system-view/black.png</path>
+            <zIndex>0</zIndex>
+         </image>
          <image name="gamelist-carousel-header-shadow">
             <origin>0 0</origin>
             <pos>0 0</pos>
@@ -477,19 +486,71 @@ https://github.com/anthonycaccese/techdweeb-es-de
          </image>
          <carousel name="gamelist-carousel">
             <origin>0 0</origin>
-            <pos>0 0.3</pos>
-            <size>1 0.65</size>
             <color>00000000</color>
             <itemVerticalAlignment>center</itemVerticalAlignment>
             <fastScrolling>true</fastScrolling>
-            <imageType>cover</imageType>
             <textColor>ffffff</textColor>
             <textBackgroundColor>333333</textBackgroundColor>
             <fontPath>${logoFont}</fontPath>
-            <fontSize>0.075</fontSize><!-- 36 -->
+            <fontSize>0.05</fontSize><!-- 24 -->
             <lineSpacing>0.75</lineSpacing>
             <letterCaseAutoCollections>capitalize</letterCaseAutoCollections>
+            <unfocusedItemOpacity>1</unfocusedItemOpacity>
+            <unfocusedItemDimming>0.4</unfocusedItemDimming>
             <zIndex>2</zIndex>
+         </carousel>
+      </view>
+   </variant>
+   <variant name="
+      gamelist-carousel-cover"
+      >
+      <view name="gamelist">
+         <carousel name="gamelist-carousel">
+            <pos>0 0.3</pos>
+            <size>1 0.65</size>
+         </carousel>
+      </view>
+   </variant>
+   <!-- Gamelist View - Carousel Variant with Name -->
+   <variant name="
+      gamelist-carousel-cover-name
+      gamelist-carousel-screenshot-name
+      ">
+      <view name="gamelist">
+         <carousel name="gamelist-carousel">
+            <pos>0 0.3</pos>
+            <size>1 0.55</size>
+         </carousel>
+         <text name="game-name">
+            <origin>0.5 1</origin>
+            <pos>0.5 0.975</pos>
+            <metadata>name</metadata>
+            <fontPath>${logoFont}</fontPath>
+            <fontSize>0.075</fontSize><!-- 36 -->
+            <color>${gamelistMetadataLabelColor}</color>
+         </text>
+      </view>
+   </variant>
+   <!-- Gamelist View - Carousel Variant with Boxart -->
+   <variant name="
+      gamelist-carousel-cover
+      gamelist-carousel-cover-name
+      ">
+      <include>./_inc/systems/coversize/${systemCoverSizeType}.xml</include>
+      <view name="gamelist">
+         <carousel name="gamelist-carousel">
+            <imageType>cover</imageType>
+         </carousel>
+      </view>
+   </variant>
+   <!-- Gamelist View - Carousel Variant with Screenshot -->
+   <variant name="
+      gamelist-carousel-screenshot-name
+      ">
+      <include>./_inc/systems/coversize/landscape.xml</include>
+      <view name="gamelist">
+         <carousel name="gamelist-carousel">
+            <imageType>screenshot</imageType>
          </carousel>
       </view>
    </variant>

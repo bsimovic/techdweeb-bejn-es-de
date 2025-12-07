@@ -122,6 +122,8 @@ based on 640x480
    -->
    <variant name="
       gamelist-carousel-cover
+      gamelist-carousel-cover-name
+      gamelist-carousel-screenshot-name
       ">
       <view name="gamelist">
          <image name="gamelist-carousel-header-shadow">

@@ -170,4 +170,23 @@
          <gamelistRatingColor>ffe580</gamelistRatingColor>
       </variables>
    </colorScheme>
+   <colorScheme name="black">
+      <variables>
+         <systemLogoColor>ffffff</systemLogoColor>
+         <systemBackgroundImage>./_inc/images/system-view/black.png</systemBackgroundImage>
+         <systemBackgroundImageColor>ffffff</systemBackgroundImageColor>
+         <systemBackgroundImageSaturation>1</systemBackgroundImageSaturation>
+         <systemBackgroundImageBrightness>0</systemBackgroundImageBrightness>
+         <gamelistOverlayColor>0a0a0a</gamelistOverlayColor>
+         <gamelistOverlayShadowColor>000000</gamelistOverlayShadowColor>
+         <gamelistBackgroundColor>000000</gamelistBackgroundColor>
+         <gamelistTextlistPrimaryColor>909090</gamelistTextlistPrimaryColor>
+         <gamelistTextlistSecondaryColor>909090</gamelistTextlistSecondaryColor>
+         <gamelistTextlistSelectorColor>2a2a2a</gamelistTextlistSelectorColor>
+         <gamelistTextlistSelectedColor>ffffff</gamelistTextlistSelectedColor>
+         <gamelistMetadataLabelColor>ffffff</gamelistMetadataLabelColor>
+         <gamelistMetadataColor>909090</gamelistMetadataColor>
+         <gamelistRatingColor>909090</gamelistRatingColor>
+      </variables>
+   </colorScheme>
 </theme>
