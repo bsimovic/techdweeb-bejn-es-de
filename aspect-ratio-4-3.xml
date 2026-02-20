@@ -34,7 +34,8 @@ based on 640x480
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
       gamelist-list-metadata-screenshot-cover,
-      gamelist-list-screenshot
+      gamelist-list-metadata-screenshot-3dbox,
+      gamelist-list-screenshot,
       ">
       <view name="gamelist">
          <image name="gamelist-textlist-background-shadow">
@@ -58,11 +59,11 @@ based on 640x480
    <!-- List Variants with Metadata -->
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
-      gamelist-list-metadata-screenshot-cover
+      gamelist-list-metadata-screenshot-cover,
+      gamelist-list-metadata-screenshot-3dbox
       ">
       <view name="gamelist">
          <video name="gamelist-game-video">
-            <pos>0.71875 0.41666667</pos><!-- 460 200 -->
             <cropSize>0.5625 0.83333333</cropSize><!-- 360 400 -->
          </video>
          <image name="gamelist-metadata-background">
@@ -82,15 +83,16 @@ based on 640x480
             <size>0.25 0.04166667</size><!-- 160 20 -->
             <visible>true</visible>
          </text>
-         <text name="gamelist-game-rating-label">
+         <text name="gamelist-game-developer-label">
             <pos>0.8125 0.82291667</pos><!-- 520 395 -->
             <size>0.171875 0.04166667</size><!-- 110 20 -->
             <visible>true</visible>
          </text>
-         <rating name="gamelist-rating">
+         <text name="gamelist-game-developer">
             <pos>0.8125 0.83333333</pos><!-- 520 400 -->
+            <size>0.171875 0.04166667</size><!-- 110 20 -->
             <visible>true</visible>
-         </rating>
+         </text>
          <text name="gamelist-game-release-date-label">
             <pos>0.8125 0.92708333</pos><!-- 520 445 -->
             <size>0.171875 0.04166667</size><!-- 110 20 -->

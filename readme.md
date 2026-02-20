@@ -1,3 +1,26 @@
+# A fork of the [TechDweeb](https://github.com/Weestuarty-es-de/diamond-es-de) ES-DE theme
+
+Changed according to my personal preferences.  
+Original ReadMe is below.  
+
+## Changes
+
+- Made video start immediately and repeat indefinitely
+- Enabled the clock in the top left
+- Lowered the delay before selected game name starts scrolling horizontally to 1 second
+- Removed "rating" and "player count" metadata fields
+- Moved "genre" metadata field to where "rating" used to be and extended the value length
+- (All metadata changes have been adapted to all aspect ratios)
+- Moved video origin to top-middle (see below)
+- Added new variant: Textlist with video and 3D box
+
+## Video headaches
+I've moved to video crop origin to top-middle so Nintendo DS games now display the top screen in the video area and there is less awkward UI cutoff in general. However, this is still not ideal, as it now sucks for games that use the bottom screen as main (Zelda: Phantom Hourglass for example) and many old sidescrollers where most of the action is on the bottom of the screen (Super Mario Bros., Castlevania, etc.).  
+Ideally, the gamelist should be moved to the right side, metadata to the top and video to bottom left. I *might* do that someday, though it requires a bit more work than what I've already done.
+
+![gamelist](gamelist.png)
+
+---
 # TechDweeb (ES-DE Version)
 
 > Of all the Emulation Station themes you could have downloaded, you chose this one. I hope you're proud of yourself. - [TechDweeb](https://youtube.com/techdweeb)

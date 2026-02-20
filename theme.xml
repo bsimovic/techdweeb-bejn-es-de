@@ -95,7 +95,9 @@ https://github.com/anthonycaccese/techdweeb-es-de
       <!-- End: menu styling resets -->
       <clock name="clock">
          <scope>view</scope>
-         <opacity>0</opacity>
+         <opacity>1</opacity>
+         <fontPath>${logoFont}</fontPath>
+         <fontSize>0.05</fontSize>
       </clock>
       <systemstatus name="system-status">
          <scope>view</scope>
@@ -210,17 +212,20 @@ https://github.com/anthonycaccese/techdweeb-es-de
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
       gamelist-list-metadata-screenshot-cover,
+      gamelist-list-metadata-screenshot-3dbox,
       gamelist-list-screenshot
       ">
       <view name="gamelist">
          <video name="gamelist-game-video">
-            <origin>0.5 0.5</origin>
-            <delay>3</delay>
-            <iterationCount>1</iterationCount>
+            <origin>1 0</origin>
+            <pos>1 0</pos>
+            <delay>0</delay>
+            <iterationCount>0</iterationCount>
             <onIterationsDone>image</onIterationsDone>
             <interpolation>nearest</interpolation>
             <pillarboxes>false</pillarboxes>
             <imageType>screenshot</imageType>
+            <cropPos>0.5 0</cropPos>
             <zIndex>1</zIndex>
          </video>
          <image name="gamelist-textlist-background-shadow">
@@ -253,6 +258,7 @@ https://github.com/anthonycaccese/techdweeb-es-de
             <selectorVerticalOffset>${gamelistSelectorVerticalOffset}</selectorVerticalOffset>
             <indicators>ascii</indicators>
             <zIndex>3</zIndex>
+            <textHorizontalScrollDelay>1</textHorizontalScrollDelay>
          </textlist>
       </view>
       <fontSize name="small">
@@ -283,7 +289,8 @@ https://github.com/anthonycaccese/techdweeb-es-de
    <!-- Gamelist View - List Variants with Metadata -->
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
-      gamelist-list-metadata-screenshot-cover
+      gamelist-list-metadata-screenshot-cover,
+      gamelist-list-metadata-screenshot-3dbox
       ">
       <view name="gamelist">
          <image name="gamelist-metadata-background">
@@ -297,6 +304,29 @@ https://github.com/anthonycaccese/techdweeb-es-de
             <origin>0 1</origin>
             <zIndex>3</zIndex>
          </image>
+         <text name="gamelist-game-developer-label">
+            <origin>0 1</origin>
+            <text>Developer</text>
+            <fontPath>${metadataFont}</fontPath>
+            <fontSize>${gamelistMetadataFontSize}</fontSize>
+            <color>${gamelistMetadataLabelColor}</color>
+            <metadataElement>true</metadataElement>
+            <verticalAlignment>bottom</verticalAlignment>
+            <lineSpacing>1</lineSpacing>
+            <visible>false</visible>
+         </text>
+         <text name="gamelist-game-developer">
+            <origin>0 0</origin>
+            <metadata>developer</metadata>
+            <fontPath>${metadataFont}</fontPath>
+            <fontSize>${gamelistMetadataFontSize}</fontSize>
+            <color>${gamelistMetadataColor}</color>
+            <verticalAlignment>top</verticalAlignment>
+            <lineSpacing>1</lineSpacing>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+            <visible>false</visible>
+         </text>
          <text name="gamelist-game-genre-label">
             <origin>0 1</origin>
             <text>Genre</text>
@@ -320,26 +350,6 @@ https://github.com/anthonycaccese/techdweeb-es-de
             <containerType>horizontal</containerType>
             <visible>false</visible>
          </text>
-         <text name="gamelist-game-rating-label">
-            <origin>0 1</origin>
-            <text>Rating</text>
-            <fontPath>${metadataFont}</fontPath>
-            <fontSize>${gamelistMetadataFontSize}</fontSize>
-            <color>${gamelistMetadataLabelColor}</color>
-            <metadataElement>true</metadataElement>
-            <verticalAlignment>bottom</verticalAlignment>
-            <lineSpacing>1</lineSpacing>
-            <visible>false</visible>
-         </text>
-         <rating name="gamelist-rating">
-            <origin>0 0</origin>
-            <size>0 ${gamelistRatingSize}</size>
-            <color>${gamelistRatingColor}</color>
-            <filledPath>./_inc/images/icon-star-filled.png</filledPath>
-            <unfilledPath>./_inc/images/icon-star-unfilled.png</unfilledPath>
-            <overlay>false</overlay>
-            <visible>false</visible>
-         </rating>
          <text name="gamelist-game-release-date-label">
             <origin>0 1</origin>
             <text>Released</text>
@@ -362,27 +372,6 @@ https://github.com/anthonycaccese/techdweeb-es-de
             <lineSpacing>1</lineSpacing>
             <visible>false</visible>
          </datetime>
-         <text name="gamelist-game-players-label">
-            <origin>0 1</origin>
-            <text>Players</text>
-            <fontPath>${metadataFont}</fontPath>
-            <fontSize>${gamelistMetadataFontSize}</fontSize>
-            <color>${gamelistMetadataLabelColor}</color>
-            <metadataElement>true</metadataElement>
-            <verticalAlignment>bottom</verticalAlignment>
-            <lineSpacing>1</lineSpacing>
-            <visible>false</visible>
-         </text>
-         <text name="gamelist-game-players">
-            <origin>0 0</origin>
-            <metadata>players</metadata>
-            <fontPath>${metadataFont}</fontPath>
-            <fontSize>${gamelistMetadataFontSize}</fontSize>
-            <color>${gamelistMetadataColor}</color>
-            <verticalAlignment>top</verticalAlignment>
-            <lineSpacing>1</lineSpacing>
-            <visible>false</visible>
-         </text>
          <text name="gamelist-game-last-played-label">
             <origin>0 1</origin>
             <text>Last Played</text>
@@ -447,6 +436,15 @@ https://github.com/anthonycaccese/techdweeb-es-de
       <view name="gamelist">
          <image name="gamelist-game-image">
             <imageType>cover</imageType>
+         </image>
+      </view>
+   </variant>
+   <variant name="
+      gamelist-list-metadata-screenshot-3dbox
+      ">
+      <view name="gamelist">
+         <image name="gamelist-game-image">
+            <imageType>3dbox</imageType>
          </image>
       </view>
    </variant>

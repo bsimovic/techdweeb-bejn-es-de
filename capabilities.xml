@@ -1,6 +1,6 @@
 <themeCapabilities>
    
-   <themeName>TechDweeb</themeName>
+   <themeName>TechDweeb-Bejn</themeName>
 
    <!--
    ///
@@ -88,7 +88,11 @@
       <selectable>true</selectable>
    </variant>
    <variant name="gamelist-list-metadata-screenshot-cover">
-      <label>List: Metadata, Screenshot &amp; Boxart</label>
+      <label>List: Metadata, Screenshot &amp; Cover</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="gamelist-list-metadata-screenshot-3dbox">
+      <label>List: Metadata, Screenshot &amp; 3D Box</label>
       <selectable>true</selectable>
    </variant>
    <variant name="gamelist-list-screenshot">
@@ -96,11 +100,11 @@
       <selectable>true</selectable>
    </variant>
    <variant name="gamelist-carousel-cover">
-      <label>Carousel: Boxart</label>
+      <label>Carousel: Cover</label>
       <selectable>true</selectable>
    </variant>
    <variant name="gamelist-carousel-cover-name">
-      <label>Carousel: Boxart &amp; Name</label>
+      <label>Carousel: Cover &amp; Name</label>
       <selectable>true</selectable>
    </variant>
    <variant name="gamelist-carousel-screenshot-name">

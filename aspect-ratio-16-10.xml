@@ -34,6 +34,7 @@ based on 768x480
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
       gamelist-list-metadata-screenshot-cover,
+      gamelist-list-metadata-screenshot-3dbox,
       gamelist-list-screenshot
       ">
       <view name="gamelist">
@@ -58,11 +59,11 @@ based on 768x480
    <!-- List Variants with Metadata -->
    <variant name="
       gamelist-list-metadata-screenshot-marquee,
-      gamelist-list-metadata-screenshot-cover
+      gamelist-list-metadata-screenshot-cover,
+      gamelist-list-metadata-screenshot-3dbox
       ">
       <view name="gamelist">
          <video name="gamelist-game-video">
-            <pos>0.68229167 0.41666667</pos><!-- 524 200 -->
             <cropSize>0.63541667 0.83333333</cropSize><!-- 488 400 -->
          </video>
          <image name="gamelist-metadata-background">
@@ -72,25 +73,26 @@ based on 768x480
             <pos>0.41666667 0.85416667</pos><!-- 320 410 -->
             <maxSize>0.20833333 0.3125</maxSize><!-- 160 150 -->
          </image>
-         <text name="gamelist-game-genre-label">
+         <text name="gamelist-game-developer-label">
             <pos>0.41666667 0.92708333</pos><!-- 320 445 -->
             <size>0.20833333 0.04166667</size><!-- 160 20 -->
             <visible>true</visible>
          </text>
-         <text name="gamelist-game-genre">
+         <text name="gamelist-game-developer">
             <pos>0.41666667 0.9375</pos><!-- 320 450 -->
             <size>0.20833333 0.04166667</size><!-- 160 20 -->
             <visible>true</visible>
          </text>
-         <text name="gamelist-game-rating-label">
+         <text name="gamelist-game-genre-label">
             <pos>0.65755208 0.82291667</pos><!-- 505 395 -->
             <size>0.13671875 0.04166667</size><!-- 105 20 -->
             <visible>true</visible>
          </text>
-         <rating name="gamelist-rating">
+         <text name="gamelist-game-genre">
             <pos>0.65755208 0.83333333</pos><!-- 505 400 -->
+            <size>0.33203125 0.04166667</size><!-- 255 20 -->
             <visible>true</visible>
-         </rating>
+         </text>
          <text name="gamelist-game-release-date-label">
             <pos>0.65755208 0.92708333</pos><!-- 505 445 -->
             <size>0.13671875 0.04166667</size><!-- 105 20 -->
