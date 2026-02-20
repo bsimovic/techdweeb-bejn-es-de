@@ -1,4 +1,4 @@
-# A fork of the [TechDweeb](https://github.com/Weestuarty-es-de/diamond-es-de) ES-DE theme
+# A fork of the [TechDweeb](https://github.com/anthonycaccese/techdweeb-es-de) ES-DE theme
 
 Changed according to my personal preferences.  
 Original ReadMe is below.  
